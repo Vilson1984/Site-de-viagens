@@ -1,0 +1,978 @@
+<html>
+
+    <head>
+        <title>Voyager Turismo</title>
+        <link rel="stylesheet" type="text/css" href="styles/stylenacional.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="D:\Estudo Gledson\script\script"></script>
+    </head>
+
+    <body>
+        <header>
+            <style>
+                * {
+                    box-sizing: border-box;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+
+                header {
+                    background-color: #9ca6b6;
+                    color: #2800ad;
+                    font-size: 60;
+                    text-align: left;
+                    display: flex;
+                }
+
+                .logo {
+                    left: 18px;
+                    position: absolute;
+                    top: 0;
+                    align-items: flex;
+                    border-radius: 45px;
+                }
+
+                .cidade {
+                    position: relative;
+                    right: 120px;
+                    color: #2e4d91;
+                }
+
+                .titulo {
+                    text-align: center;
+                    position: absolute;
+                    top: 98px;
+                    right: 340px;
+                    text-decoration: underline;
+                    color: #43453a;
+                    font-size: 18;
+                }
+
+
+                /*NAVEGAÇÃO*/
+                nav {
+                    background-color: #c1bbd1;
+                    padding: 8px;
+                    height: 750px;
+                    width: 25%;
+                    float: left;
+                    list-style: none;
+                }
+
+                article {
+                    background-color: #e4e4e4;
+                    right: -190px;
+                    width: 75%;
+                    float: left;
+                    height: 750px;
+                    padding: 15;
+                }
+
+
+                .menu {
+                    background-color: #e4e4e4;
+                    font-family: Verdana;
+                    padding: 1px;
+                    list-style: none;
+                    color: #fff;
+                }
+
+                ul {
+                    list-style-type: none;
+                    background-color: #e4e4e4;
+                    width: 363px;
+                    padding-left: 1px;
+                }
+
+                li a {
+                    color: #43453a;
+                    display: block;
+                    height: 30px;
+                    padding-left: 10px;
+                    position: relative;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+                }
+
+                li a:hover {
+                    background-color: #2e4d91;
+                    color: #ffffff;
+                }
+
+                .bg-promocao-3 a:hover {
+                    color: #4202f3;
+                }
+
+                .bg-promocao-3 a:link {
+                    color: #2c2c29;
+                }
+
+                .bg-promocao-3 a:active {
+                    color: #ffffff;
+                }
+
+                a:visited {
+                    color: #2c2c29;
+                }
+
+                .material-icons {
+                    position: relative;
+                    top: 5px;
+                    left: 10px;
+                }
+
+                .pagina {
+                    position: absolute;
+                    margin-top: -16;
+                    margin-left: 50;
+                }
+
+                .caixa {
+                    background-color: #999999;
+                    width: 30;
+                    color: #ffffff;
+                    text-align: center;
+                    position: absolute;
+                    left: 313px;
+                    top: 6px;
+                    font-weight: bold;
+                    font-size: 14;
+                }
+
+
+                .texto-origem,
+                .texto-destino,
+                .texto-data-volta,
+                .texto-data-ida {
+                    position: absolute;
+                    color: #43453a;
+                    top: 10;
+                }
+
+                .texto-origem {
+
+                    left: 80px;
+                }
+
+                .texto-destino {
+                    left: 270px;
+                }
+
+                .texto-data-ida {
+                    left: 640px;
+                }
+
+
+                .bg-promocao-2 {
+                    position: absolute;
+                    top: 165px;
+                    left: -150px;
+                    height: 425px;
+                    width: 1040px;
+                    background-color: #c1bbd1;
+                    border-radius: 7px;
+                    color: #43453a;
+                    font-weight: bold;
+                }
+
+
+
+                .texto-data-ida {
+                    right: -64px;
+                }
+
+                .texto-data-volta {
+                    right: 190px;
+                }
+
+                .texto-classe-passagem {
+                    position: relative;
+                    top: 300px;
+                    left: 540px;
+                }
+
+                .passageiros-classe {
+                    position: relative;
+                    top: -100px;
+                    left: 25px;
+                }
+
+                .icone-circulo {
+                    position: absolute;
+                    left: 40px;
+                    color: #4202f3;
+                }
+
+                .icone-ida-e-volta {
+                    position: absolute;
+                    top: 26px;
+                    left: 204px;
+                    color: #4202f3;
+                }
+
+                .icone-location {
+                    position: absolute;
+                    left: 235px;
+                    color: #4202f3;
+                }
+
+
+                .origem-input,
+                .data-volta,
+                .data-ida,
+                .destino-input,
+                .input-nome-adulto,
+                .input-numero-passaporte-adulto,
+                #classe-passagem,
+                #status {
+                    background-color: #ffffff;
+                    border: revert;
+                    border-radius: 15px;
+                    color: #2c2c29;
+                    border-color: #4202f3;
+                    cursor: pointer;
+                }
+
+                #nome {
+                    border: revert;
+                    border-radius: 15px;
+                    color: #2c2c29;
+                    border-color: #4202f3;
+                    cursor: pointer;
+                    width: 130px;
+                    display: inline-flex;
+                }
+
+                /*posição inputs destino*/
+                .origem-input {
+                    position: absolute;
+                    left: 50px;
+                    top: 30;
+                    height: 25;
+                }
+
+                .destino-input {
+                    position: absolute;
+                    left: 240px;
+                    height: 25;
+                    top: 30px;
+                }
+
+                /*posição inputs datas*/
+                .data-ida {
+                    position: absolute;
+                    right: 370;
+                    height: 25px;
+                    top: 30px;
+                }
+
+                .data-volta {
+                    position: absolute;
+                    right: 145px;
+                    height: 25px;
+                    top: 30px;
+                }
+
+
+                .botoes-radio {
+                    position: absolute;
+                    left: 50px;
+                    top: 100px;
+                }
+
+                button {
+                    background-color: #4202f3;
+                    border: none;
+                    border-radius: 15px;
+                    color: #ffffff;
+                    cursor: pointer;
+                }
+
+                .botao-buscar {
+                    position: absolute;
+                    right: 15px;
+                    top: 150px;
+                    width: 66px;
+                    height: 30;
+                    padding-right: 11px;
+                }
+
+
+                .classe-passagem {
+                    position: absolute;
+                    left: -5px;
+                    top: 270px;
+                }
+
+                .dados-menor {
+                    position: absolute;
+                    left: 550px;
+                    top: -25px;
+                }
+
+                .inputs-passageiro-adulto {
+                    position: relative;
+                    top: 166px;
+                    left: 190px;
+                    padding: 5px 80px 0px 4px;
+                }
+
+                .input-nome-adulto {
+                    width: 200;
+                    height: 25;
+                }
+
+                .input-numero-passaporte-adulto {
+                    width: 150px;
+                    height: 25px;
+                }
+
+                .tres-bgs {
+                    position: absolute;
+                    top: 39px;
+                    left: 590px;
+                }
+
+                .bg-promocao-1 {
+                    color: #43453a;
+                    position: absolute;
+                    top: 43px;
+                    left: -150px;
+                    padding: 15px;
+                    height: 116px;
+                    width: 1040px;
+                    /* background-color: #c1bbd1;
+    border-radius: 7px;*/
+                }
+
+                * {
+                    box-sizing: border-box;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+
+                .passageiro-menor {
+                    position: absolute;
+                    top: 191px;
+                    left: 85px;
+                    width: 200px;
+                }
+
+                .formulario-oculto {
+                    position: absolute;
+                    top: 236px;
+                    left: 85px;
+                    width: 490px;
+                }
+
+                .conjunto-checkbox {
+                    position: absolute;
+                    right: 210px;
+                    top: 105px;
+                }
+
+                .checkbox {
+                    position: absolute;
+                    top: 2px;
+                    left: -18px;
+                }
+
+
+
+
+
+
+
+
+                .titulo-bg2 {
+                    font-weight: bold;
+                    color: #121312;
+                }
+
+                .hospedagens-baratas {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 545px;
+                }
+
+                .passagens-nordeste {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 20px;
+                }
+
+                .pacotes-de-viagens {
+                    position: absolute;
+                    bottom: 30;
+                    left: 300px;
+                }
+
+                .promova-seu-negocio {
+                    position: absolute;
+                    bottom: 50px;
+                    right: 21px;
+                }
+
+
+                .bg-promocao-3 {
+                    border-radius: 10px;
+                    background: #c1bbd1;
+                    height: 150px;
+                    position: absolute;
+                    top: 615px;
+                    width: 1040px;
+                    left: -150px;
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /*RODAPÉ*/
+                .img-email {
+                    position: relative;
+                    bottom: -23;
+                }
+
+                .informativo-newsletter {
+                    text-align-last: center;
+                }
+
+                .inscreva-se {
+                    color: #43453a;
+                    font-weight: 700;
+                    font-size: 18px;
+                    font-family: courier;
+                    margin-left: -13px;
+                    font-weight: bold;
+                    margin-top: -80px;
+                }
+
+                .texto-sobre-nos {
+                    color: #43453a;
+                    position: absolute;
+                    top: 2px;
+                    padding: 10px;
+                    height: 116px;
+                    width: 1040;
+                }
+
+                .texto-inscreva-se {
+                    color: #43453a;
+                    font-weight: 700;
+                    font-size: 16px;
+                    font-family: courier;
+                    margin-left: -13px;
+                    margin-top: 7px;
+                }
+
+                .roda-pé-caixa-de-inscricao {
+                    color: #049ba0;
+                    /* position: absolute; */
+                    /* left: -23px; */
+                    font-size: 11px;
+                    font-weight: bold;
+                    /* word-spacing: 0px; */
+                    margin-top: 6px;
+                }
+
+                input[name=botao-enviar-rodape] {
+                    background-color: #4202f3;
+                    border: none;
+                    border-radius: 15px;
+                    color: #ffffff;
+                    position: absolute;
+                    right: 35;
+                    margin-top: -80;
+                    height: 30;
+                    cursor: pointer;
+                }
+
+                input[name=text-e-mail-rodapé] {
+                    font-style: italic;
+                    background-color: #e4e4e4;
+                    border: 1;
+                    border-radius: 15px;
+                    color: #000000;
+                    font-size: 16;
+                    padding: 9px 60px 0px 38px;
+                    position: absolute;
+                    right: 180;
+                    margin-top: -80;
+                    height: 30;
+                }
+
+                input:hover {
+                    background-color: #a5a5a5;
+                    color: #161616;
+                }
+
+                .copyright {
+                    color: #2800ad;
+                    background-color: #9ca6b6;
+                    text-align-last: center;
+                    font-style: italic;
+                    width: -webkit-fill-available;
+                    position: absolute;
+                    margin-top: 23px;
+                }
+
+                input[type=text] {
+                    font-style: italic;
+                }
+
+                footer {
+                    position: absolute;
+                    bottom: -90px;
+                    display: contents;
+                }
+            </style>
+
+            <div>
+                <img src="D:\Estudo Gledson\images\logo.jpg" width="70px" class="logo">
+            </div>
+            <div class="nome-empresa">Voyager Turismo</div>
+        </header>
+
+        <nav>  
+    
+            <ul>
+                <li>
+                    <a href="index.html">
+                    <div class="material-icons">home</div>
+                    <div class="pagina">Página</div>
+                    </a href>
+                </li>
+                
+                <div class="linha">
+                    <li>
+                        <a href="pages/nacional.html">
+                            <div class="material-icons">flight_takeoff</div>
+                            <div class="pagina">Destinos Nacionais</div> 
+                            <div class="caixa">50</div>
+                        </a href>
+                    </li>
+                </div>
+        
+                <div class="linha">
+                    <li>
+                        <a href="pages/internacional.html">
+                            <div class="material-icons">public</div>
+                            <div class="pagina">Destinos Internacionais</div> 
+                            <div class="caixa">12</div>
+                        </a href>
+                    </li>
+                </div>
+        
+                <div class="linha">
+                    <li>
+                        <a href="pages/cambio.html">
+                            <div class="material-icons">paid</div>
+                            <div class="pagina">Câmbio</div>
+                        </a href>
+                    </li>
+                </div>
+                
+                <div class="linha">
+                    <li>
+                        <a href="pages\dicas.html">
+                            <div class="material-icons">done</div>
+                            <div class="pagina">Dica ao viajar</div>
+                        </a href>
+                    </li>
+                </div>
+        
+                <div class="linha">
+                    <li>
+                        <a href="pages/sobre.html">
+                            <div class="material-icons">group</div>
+                            <div class="pagina">Sobre nós</div>
+                        </a href>
+                    </li>
+                </div>
+                       
+                <div class="linha">
+                    <li>
+                        <a href="pages/contato.html">
+                            <div class="material-icons">settings_phone</div>
+                            <div class="pagina">Contato</div>
+                        </a href>
+                    </li>
+                </div>
+            </ul>
+           
+            
+        </nav>
+
+        <article>
+            <div class="tres-bgs">
+                <div class="bg-promocao-1">
+
+
+                    <div class="texto-sobre-nos">
+                        Reserve sua viagem no Decolar e garanta as melhores tarifas em passagens aéreas, hotéis, pacotes
+                        de viagem, cruzeiros e aluguel de carro. Somos a maior agência de viagens online da América
+                        Latina presente em 21 países, dentre eles Argentina, Estados Unidos e Espanha. Contamos com a
+                        parceria de mais de 500 companhias aéreas e 150 mil hotéis em todo o mundo e, com isso,
+                        garantimos o melhor preço de viagem do Brasil. Ao comprar uma passagem aérea ou um pacote de
+                        viagem, os clientes do Decolar também garantem vantagens exclusivas, como descontos em
+                        restaurantes e lojas no destino escolhido, além de 10% de desconto em compras no Duty Free.
+                        Confira nossas promoções e vantagens. Aproveite!
+                    </div>
+
+
+                </div>
+
+                <div class="bg-promocao-2">
+
+
+                    <div id="caixacomprapassagem" class="caixa-compra-passagem">
+
+                        <div class="texto-passagens">
+                        </div>
+
+
+                        <form method="POST"></form>
+
+                        <div class="conjunto-origem-destino-dataida-datavolta">
+
+                            <div class="texto-origem">
+                                Origem
+                            </div>
+
+                            <input type="text" id="origem" name="origem" value="sua cidade de partida"
+                                onfocus="this.value='';" class="origem-input" onchange="caixaBaixaorigem()"
+                                onkeydown="mudaCorletra(this)" onblur="mudarCorfundoorigem()">
+
+                            <div class="icone-circulo">
+                                <i class="material-icons">
+                                    adjust
+                                </i>
+                            </div>
+                            
+                            <script>
+                               document.getElementById("origem").innerHTML = nameOrigin;
+                            </script>
+
+
+
+                            <div class="icone-ida-e-volta">
+                                <i class="material-icons">
+                                    sync_alt
+                                </i>
+                            </div>
+
+
+                            <div class="conjunto-formulario-destino">
+                                <div class="texto-destino">
+                                    Destino
+                                </div>
+
+                                <input type="text" id="destino" name="origem" value="sua cidade destino"
+                                    onfocus="this.value='';" class="destino-input" onchange="caixaBaixaorigem()"
+                                    onkeydown="mudaCorletra(this)" onblur="mudarCorfundodestino()">
+
+                                <div class="icone-location">
+
+                                    <i class="material-icons">
+                                        location_on
+                                    </i>
+                                </div>
+                            </div>
+
+
+                            <div class="botoes-radio">
+                                &nbsp; &nbsp; Ida e Volta
+                                <input type="radio" name="ida-e-volta" value="ida e volta" onfocus="this.value='';">
+                                &nbsp; &nbsp; Só Ida
+                                <input type="radio" name="ida-e-volta" value="ida" onfocus="this.value='';">
+                                &nbsp; &nbsp; Multidestino
+                                <input type="radio" name="ida-e-volta" value="multidestino" onfocus="this.value='';">
+                            </div>
+
+
+
+                            <div class="texto-data-ida">
+                                Data de Ida
+                            </div>
+
+                            <input type="date" id="dataIda" name="data-ida" value="data ida e volta"
+                                onfocus="this.value='';" class="data-ida" onblur="mudarCordataIda()">
+
+
+                            <div class="texto-data-volta">
+                                Data de Volta
+                            </div>
+
+                            <input type="date" id="dataVolta" name="data-volta" value="data ida e volta"
+                                onfocus="this.value='';" class="data-volta" onblur="mudarCordataVolta()">
+
+                            <button id="botaoEnviar" class="botao-buscar" onclick="compraConcluida()">
+                                &nbsp; Enviar
+                            </button>
+
+                            <script>
+                                function compraConcluida() {
+                                    window.alert('Compra Concluída com sucesso!')
+                                }
+                            </script>
+
+
+
+
+                            <div class="passageiros-classe">
+
+                                <div class="classe-passagem">
+                                    <p>&nbsp;&nbsp;Classe:</p>
+                                    <select name="classe-passagem" id="classe-passagem" onblur="mudaCorClasse()">
+                                        <option value="economica">Econômica</option>
+                                        <option value="premium-economy">Premium Economy</option>
+                                        <option value="executiva/business">Executiva/Business</option>
+                                        <option value="primeira-classe">Primeira Classe</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+
+                            <div class="conjunto-checkbox">
+
+                                <div class="texto-checkbox">
+                                    Ainda não defini as datas
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="checkbox" name="checkbox" value="" class="checkbox"
+                                        onclick="desativarDatas(this.checked)">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <hr style="position:relative; top:137;">
+
+
+                        <div id="inputsPassageiroadulto" class="inputs-passageiro-adulto">
+                            <p>Passageiro Adulto:</p>
+                            <input class="input-nome-adulto" type="text" id="nome-adulto" name="nome-adulto"
+                                onfocus="this.value='';" value="Digite seu nome" onblur="mudarCorNomeAdulto()"
+                                required>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <input class="input-numero-passaporte-adulto" type="text" id="numero-passaporte-adulto"
+                                onfocus="this.value='';" name="numero-passaporte-adulto" value="Nº do passaporte"
+                                onblur="mudarCorPassaporte()" required>
+
+                            <button id="botao-duplicar" onclick="duplicate()">+</button>
+                            <button id="botao-subtrair" onclick="remove()">-</button>
+                        </div>
+
+                        <script>
+                            function remove() {
+                                var removeClone = document.getElementById('caixacomprapassagem').lastElementChild;
+                                document.getElementById('caixacomprapassagem').lastElementChild.style.display = "none";
+                            }
+                        </script>
+
+
+                        <!--CLONAR A DIV PASSAGEIRO ADULTO -->
+                        <script>
+                            var i = 0;
+                            var original = document.getElementById('inputsPassageiroadulto');
+
+                            function duplicate() {
+                                clone = original.cloneNode(true); // "deep" clone
+                                clone.id = "inputsPassageiroadulto" + ++i;
+                                // or clone.id = ""; if the divs don't need an ID
+                                original.parentNode.appendChild(clone);
+
+
+                                do {
+                                } while (original > inputsPassageiroadulto5);
+                                document.getElementById('botao-duplicar').disabled;
+                            }
+                        </script>
+
+
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+                        <div class="dados-menor">
+                            <div class="passageiro-menor">
+                                <p>Passageiro menor de idade?</p>
+                                <select id="status" name="status" onblur="mudarCorMenor()">
+                                    <option value=""></option>
+                                    <option value="sim">Sim</option>
+                                    <option value="">Não</option>
+                                </select><br><br>
+                            </div>
+
+                            <div class="formulario-oculto" id="nome" style='display:none;'>
+                                <input id="nome" type="text" value="Passageiro menor" name="nome"
+                                    onfocus="this.value='';" onkeyup="alertaLogin(this)">
+                                <input id="nome" type="text" value="Nº Passaporte" name="nome" onfocus="this.value='';"
+                                    onkeyup="alertaLogin(this)">
+                                <input id="nome" type="text" value="Nome do Responsavel" name="nome"
+                                    onfocus="this.value='';" onkeyup="alertaLogin(this)">
+                            </div>
+                        </div>
+
+
+                        <script>
+                            function alertaLogin() {
+                                window.alert("O preenchimento deste campo é possível somente se um adulto efetuar o LOGIN na conta.");
+                            }
+
+                        </script>
+
+
+                        <!--HABILITAR FORMULÁRIO OCULTO MENOR DE IDADE-->
+                        <script type="text/javascript">
+                            $('#status').change(function () {
+                                var valor = $('#status').val();
+                                if (valor == "sim") {
+                                    $('#nome').show();
+                                }
+                                else {
+                                    $('#nome').hide();
+                                }
+                            });
+                        </script>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+                <div class="bg-promocao-3">
+                    <div class="hospedagens-baratas">
+                        <div class="titulo-bg2">Hospedagens Baratas</div>
+                        <a href="">
+                            <p>Hotéis em Curitiba</p>
+                        </a>
+                        <a href="">
+                            <p>Pousadas em Campos do Jordão</p>
+                        </a>
+                        <a href="">
+                            <p>Pousadas em Bombinhas</p>
+                        </a>
+                        <a href="">
+                            <p>Pousadas em Monte Verde</p>
+                        </a>
+                    </div>
+
+
+                    <div class="passagens-nordeste">
+                        <div class="titulo-bg2">Passagens</div>
+                        <a href="">
+                            <p>Passagens para Maceió</p>
+                        </a>
+                        <a href="">
+                            <p>Passagens para Porto de Galinhas</p>
+                        </a>
+                        <a href="">
+                            <p>Passagens para João Pessoa</p>
+                        </a>
+                        <a href="">
+                            <p>Passagens para Jericoacoara</p>
+                        </a>
+                    </div>
+
+
+                    <div class="pacotes-de-viagens">
+                        <div class="titulo-bg2">Pacotes de Viagens</div>
+                        <a href="">
+                            <p>Viagem para Salvador</p>
+                        </a>
+                        <a href="">
+                            <p>Viagem para Jalapão</p>
+                        </a>
+                        <a href="">
+                            <p>Viagem para Nordeste</p>
+                        </a>
+                        <a href="">
+                            <p>Viagem para Foz do Iguaçu</p>
+                        </a>
+                    </div>
+
+                    <div class="promova-seu-negocio">
+                        <div class="titulo-bg2">Promova seu negócio</div>
+                        <a href="">
+                            <p>Cadastre sua locadora</p>
+                        </a>
+                        <a href="">
+                            <p>Participe do Programa de Agências</p>
+                        </a>
+                        <a href="">
+                            <p>Faça parte da Rede de Afiliados</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </article>
+
+        <footer>
+
+            <i class="material-icons" style="font-size: 100; color: #4202f3;">mail</i>
+
+            <div class="informativo-newsletter">
+
+                <div class="inscreva-se">Inscreva-se para receber ofertas exclusivas </div>
+                <div class="texto-inscreva-se">Receba de primeira mão nossas ofertas e benefícios exclusivos</div>
+
+                <div class="roda-pé-caixa-de-inscricao">
+                    <i class="material-icons" style="font-size: 18px;">done &nbsp;</i>
+                    Alertas de preços personalizados
+                    <i class="material-icons" style="font-size: 18px;">done &nbsp;</i>
+                    Novidades e ofertas
+                    <i class="material-icons" style="font-size: 18px;">done &nbsp;</i>
+                    Eventos imperdíveis
+
+                    &nbsp; <a href=""> Ver políticas de privacidade
+                    </a>
+                </div>
+            </div>
+
+            <form method="POST">
+                <input type="text" id="email" name="text-e-mail-rodapé" value="insira seu e-mail"
+                    onfocus="this.value='';" onchange="caixaBaixaemail()">
+                <input type="submit" name="botao-enviar-rodape" value="Quero recebê-las">
+            </form>
+
+            <div class="copyright">Copyright</div>
+
+        </footer>
+
+
+    </body>
+    </html>
