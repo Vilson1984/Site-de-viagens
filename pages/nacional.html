@@ -2,9 +2,9 @@
 
     <head>
         <title>Voyager Turismo</title>
-        <link rel="stylesheet" type="text/css" href="">
+        <link rel="stylesheet" type="text/css" href="styles/stylenacional.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src=""></script>
+        <script src="D:\Estudo Gledson\script\script"></script>
     </head>
 
     <body>
@@ -675,9 +675,7 @@
                                 </i>
                             </div>
                             
-                            <script>
-                               document.getElementById("origem").innerHTML = nameOrigin;
-                            </script>
+                          
 
 
 
@@ -736,15 +734,6 @@
                                 &nbsp; Enviar
                             </button>
 
-                            <script>
-                                function compraConcluida() {
-                                    window.alert('Compra Concluída com sucesso!')
-                                }
-                            </script>
-
-
-
-
                             <div class="passageiros-classe">
 
                                 <div class="classe-passagem">
@@ -759,7 +748,7 @@
 
                             </div>
 
-
+                            
                             <div class="conjunto-checkbox">
 
                                 <div class="texto-checkbox">
@@ -774,6 +763,7 @@
                             </div>
                         </div>
 
+                        
                         <hr style="position:relative; top:137;">
 
 
@@ -790,6 +780,19 @@
                             <button id="botao-duplicar" onclick="duplicate()">+</button>
                             <button id="botao-subtrair" onclick="remove()">-</button>
                         </div>
+
+                        <script>
+                            function compraConcluida() {
+                                var embarque = document.getElementById("origem").value;
+                                var destino = document.getElementById("destino").value; 
+                                var dataIda = document.getElementById("dataIda").value;
+                                var dataVolta = document.getElementById("dataVolta").value;
+                                var classePassagem = document.getElementById('classe-passagem').value;
+                                var nomeAdulto = document.getElementById('nome-adulto').value;
+                                var numeroPassaporteAdulto = document.getElementById('numero-passaporte-adulto').value;
+                                confirm('A viagem está em nome de:'+nomeAdulto+'com passaporte de número:'+ numeroPassaporteAdulto + 'Sua viagem está marcada para o dia:'+ dataIda + 'cidade de embarque:' + embarque + 'e destino para na cidade de:' + destino+ 'data de chegada será no dia:' + dataVolta +'.'+'Você optou pela classe:' + classePassagem);
+                            }
+                        </script>
 
                         <script>
                             function remove() {
