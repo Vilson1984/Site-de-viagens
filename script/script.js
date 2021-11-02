@@ -1,5 +1,3 @@
-window.alert('A Voyager usa cookies para melhorar a sua experiência de navegação!')
-
 //Transforma em caixa baixa todo texto digitado
 function caixaBaixaemail() {
     var x = document.getElementById("email");
@@ -60,7 +58,62 @@ function mudarCordataVolta() {
   document.getElementById("dataVolta").style.background = "#3faf3f";
 }
 
-
 function mudarCorMenor() {
   document.getElementById("status").style.background = "#3faf3f";
 }
+
+// RESUMO DA COMPRA 
+function compraConcluida() {
+    var embarque = document.getElementById("origem").value;
+    var destino = document.getElementById("destino").value; 
+    var dataIda = document.getElementById("dataIda").value;
+    var dataVolta = document.getElementById("dataVolta").value;
+    var classePassagem = document.getElementById('classe-passagem').value;
+    var nomeAdulto = document.getElementById('nome-adulto').value;
+    var numeroPassaporteAdulto = document.getElementById('numero-passaporte-adulto').value;
+    confirm('A viagem está em nome de: '+nomeAdulto+', com passaporte de número: '+ numeroPassaporteAdulto + '.  Sua viagem está marcada para o dia: '+ dataIda + '. Cidade de embarque: ' + embarque + ', e destino para na cidade de: ' +destino+ ', data de chegada será no dia: ' + dataVolta +'. Você optou em viajar pela classe: ' + classePassagem);
+}
+
+// FUNÇÃO ADD CAMPO DE COMPRA PASSAGEIRO ADULTO
+var newid = 1;
+function adicionaPassageiro() {
+var formulario = document.getElementById("inputsPassageiroadulto")
+var cln = formulario.cloneNode(true);
+cln.id = cln.id+newid;
+document.getElementById("div").append(cln);
+newid = newid+1;
+}
+
+function removerPassageiro(){
+document.getElementById("div").lastChild.remove();
+
+}
+
+// RESTRIÇÃO, SOMENTE ADULTO PREENCHER O CAMPO DE COMPRA DE PASSAGEM DE MENOR DE 18
+function alertaLogin() {
+  window.alert("O preenchimento deste campo é possível somente se um adulto efetuar o LOGIN na conta.");
+}
+
+//MUDAR COR DO CAMPO VAZIO PARA VERMELHO
+function mudaCorCampo() {
+  if (document.getElementById("origem").value=="") {
+    document.getElementById("origem").style.backgroundColor="red";
+  }
+  else
+  document.getElementById("origem").style.backgroundColor="#3faf3f";
+}
+
+/*https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+
+//HABILITAR FORMULÁRIO OCULTO MENOR DE IDADE
+/*src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+$('#status').change(function () {
+    var valor = $('#status').val();
+    if (valor == "sim") {
+        $('#nome').show();
+    }
+    else {
+        $('#nome').hide();
+    }
+});
+*/

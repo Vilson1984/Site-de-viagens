@@ -1,0 +1,539 @@
+
+                * {
+                    box-sizing: border-box;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+
+                header {
+                    background-color: #9ca6b6;
+                    color: #2800ad;
+                    font-size: 60;
+                    text-align: left;
+                    display: flex;
+                }
+
+                .logo {
+                    left: 18px;
+                    position: absolute;
+                    top: 0;
+                    align-items: flex;
+                    border-radius: 45px;
+                }
+
+                .cidade {
+                    position: relative;
+                    right: 120px;
+                    color: #2e4d91;
+                }
+
+                .titulo {
+                    text-align: center;
+                    position: absolute;
+                    top: 98px;
+                    right: 340px;
+                    text-decoration: underline;
+                    color: #43453a;
+                    font-size: 18;
+                }
+
+
+                /*NAVEGAÇÃO*/
+                nav {
+                    background-color: #c1bbd1;
+                    padding: 8px;
+                    height: 750px;
+                    width: 25%;
+                    float: left;
+                    list-style: none;
+                }
+
+                article {
+                    background-color: #e4e4e4;
+                    right: -190px;
+                    width: 75%;
+                    float: left;
+                    height: 750px;
+                    padding: 15;
+                }
+
+
+                .menu {
+                    background-color: #e4e4e4;
+                    font-family: Verdana;
+                    padding: 1px;
+                    list-style: none;
+                    color: #fff;
+                }
+
+                ul {
+                    list-style-type: none;
+                    background-color: #e4e4e4;
+                    width: 363px;
+                    padding-left: 1px;
+                }
+
+                li a {
+                    color: #43453a;
+                    display: block;
+                    height: 30px;
+                    padding-left: 10px;
+                    position: relative;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+                }
+
+                li a:hover {
+                    background-color: #2e4d91;
+                    color: #ffffff;
+                }
+
+                .bg-promocao-3 a:hover {
+                    color: #4202f3;
+                }
+
+                .bg-promocao-3 a:link {
+                    color: #2c2c29;
+                }
+
+                .bg-promocao-3 a:active {
+                    color: #ffffff;
+                }
+
+                a:visited {
+                    color: #2c2c29;
+                }
+
+                .material-icons {
+                    position: relative;
+                    top: 5px;
+                    left: 10px;
+                }
+
+                .pagina {
+                    position: absolute;
+                    margin-top: -16;
+                    margin-left: 50;
+                }
+
+                .caixa {
+                    background-color: #999999;
+                    width: 30;
+                    color: #ffffff;
+                    text-align: center;
+                    position: absolute;
+                    left: 313px;
+                    top: 6px;
+                    font-weight: bold;
+                    font-size: 14;
+                }
+
+
+                .texto-origem,
+                .texto-destino,
+                .texto-data-volta,
+                .texto-data-ida {
+                    position: absolute;
+                    color: #43453a;
+                    top: 10;
+                }
+
+                .texto-origem {
+
+                    left: 80px;
+                }
+
+                .texto-destino {
+                    left: 270px;
+                }
+
+
+                .bg-promocao-2 {
+                    position: absolute;
+                    top: 165px;
+                    left: -60px;
+                    height: 425px;
+                    width: 1040px;
+                    background-color: #c1bbd1;
+                    border-radius: 7px;
+                    color: #43453a;
+                    font-weight: bold;
+                }
+
+
+
+                .texto-data-ida {
+                    right: 425px;
+                }
+
+                .texto-data-volta {
+                    right: 190px;
+                }
+
+                .texto-classe-passagem {
+                    position: relative;
+                    top: 300px;
+                    left: 540px;
+                }
+
+                .passageiros-classe {
+                    position: relative;
+                    top: -100px;
+                    left: 25px;
+                }
+
+                .icone-circulo {
+                    position: absolute;
+                    left: 40px;
+                    color: #4202f3;
+                }
+
+                .icone-ida-e-volta {
+                    position: absolute;
+                    top: 26px;
+                    left: 204px;
+                    color: #4202f3;
+                }
+
+                .icone-location {
+                    position: absolute;
+                    left: 235px;
+                    color: #4202f3;
+                }
+
+
+                .origem-input,
+                .data-volta,
+                .data-ida,
+                .destino-input,
+                .input-nome-adulto,
+                .input-numero-passaporte-adulto,
+                #classe-passagem,
+                #status {
+                    background-color: #ffffff;
+                    border: revert;
+                    border-radius: 15px;
+                    color: #2c2c29;
+                    border-color: #4202f3;
+                    cursor: pointer;
+                }
+
+                #nome {
+                    border: revert;
+                    border-radius: 15px;
+                    color: #2c2c29;
+                    border-color: #4202f3;
+                    cursor: pointer;
+                    width: 130px;
+                    display: inline-flex;
+                }
+
+                /*posição inputs destino*/
+                .origem-input {
+                    position: absolute;
+                    left: 50px;
+                    top: 30;
+                    height: 25;
+                }
+
+                .destino-input {
+                    position: absolute;
+                    left: 240px;
+                    height: 25;
+                    top: 30px;
+                }
+
+                /*posição inputs datas*/
+                .data-ida {
+                    position: absolute;
+                    right: 370;
+                    height: 25px;
+                    top: 30px;
+                }
+
+                .data-volta {
+                    position: absolute;
+                    right: 145px;
+                    height: 25px;
+                    top: 30px;
+                }
+
+
+                .botoes-radio {
+                    position: absolute;
+                    left: 50px;
+                    top: 100px;
+                }
+
+                button {
+                    background-color: #4202f3;
+                    border: none;
+                    border-radius: 15px;
+                    color: #ffffff;
+                    cursor: pointer;
+                }
+
+                .botao-buscar {
+                    position: absolute;
+                    right: 15px;
+                    top: 150px;
+                    width: 66px;
+                    height: 30;
+                    padding-right: 11px;
+                }
+
+
+                .classe-passagem {
+                    position: absolute;
+                    left: -5px;
+                    top: 270px;
+                }
+
+                .dados-menor {
+                    position: absolute;
+                    left: 550px;
+                    top: -25px;
+                }
+
+                .inputs-passageiro-adulto {
+                    position: relative;
+                    top: 163px;
+                    left: 190px;
+                    padding: 5px 80px 0px 4px;
+                }
+
+                .input-nome-adulto {
+                    width: 200;
+                    height: 25;
+                }
+
+                .input-numero-passaporte-adulto {
+                    width: 150px;
+                    height: 25px;
+                }
+
+                .tres-bgs {
+                    position: absolute;
+                    top: 39px;
+                    left: 590px;
+                }
+
+                .bg-promocao-1 {
+                    color: #43453a;
+                    position: absolute;
+                    top: 43px;
+                    left: -60px;
+                    background-color: #c1bbd1;
+                    padding: 15px;
+                    height: 116px;
+                    width: 1040px;
+                    /* background-color: #c1bbd1;
+    border-radius: 7px;*/
+                }
+
+                * {
+                    box-sizing: border-box;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+
+                .passageiro-menor {
+                    position: absolute;
+                    top: 191px;
+                    left: 85px;
+                    width: 200px;
+                }
+
+                .formulario-oculto {
+                    position: absolute;
+                    top: 236px;
+                    left: 85px;
+                    width: 490px;
+                }
+
+                .conjunto-checkbox {
+                    position: absolute;
+                    right: 210px;
+                    top: 105px;
+                }
+
+                .checkbox {
+                    position: absolute;
+                    top: 2px;
+                    left: -18px;
+                }
+
+
+
+
+
+
+
+
+                .titulo-bg2 {
+                    font-weight: bold;
+                    color: #121312;
+                }
+
+                .hospedagens-baratas {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 545px;
+                }
+
+                .passagens-nordeste {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 20px;
+                }
+
+                .pacotes-de-viagens {
+                    position: absolute;
+                    bottom: 30;
+                    left: 300px;
+                }
+
+                .promova-seu-negocio {
+                    position: absolute;
+                    bottom: 50px;
+                    right: 21px;
+                }
+
+
+                .bg-promocao-3 {
+                    border-radius: 10px;
+                    background: #c1bbd1;
+                    height: 150px;
+                    position: absolute;
+                    top: 610px;
+                    width: 1040px;
+                    left: -60px;
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /*RODAPÉ*/
+                .img-email {
+                    position: relative;
+                    bottom: -23;
+                }
+
+                .informativo-newsletter {
+                    text-align-last: center;
+                }
+
+                .inscreva-se {
+                    color: #43453a;
+                    font-weight: 700;
+                    font-size: 18px;
+                    font-family: courier;
+                    margin-left: -13px;
+                    font-weight: bold;
+                    margin-top: -80px;
+                }
+
+                .texto-sobre-nos {
+                    color: #43453a;
+                    position: absolute;
+                    top: 2px;
+                    padding: 10px;
+                    height: 116px;
+                    width: 1040;
+                }
+
+                .texto-inscreva-se {
+                    color: #43453a;
+                    font-weight: 700;
+                    font-size: 16px;
+                    font-family: courier;
+                    margin-left: -13px;
+                    margin-top: 7px;
+                }
+
+                .roda-pé-caixa-de-inscricao {
+                    color: #049ba0;
+                    /* position: absolute; */
+                    /* left: -23px; */
+                    font-size: 11px;
+                    font-weight: bold;
+                    /* word-spacing: 0px; */
+                    margin-top: 6px;
+                }
+
+                input[name=botao-enviar-rodape] {
+                    background-color: #4202f3;
+                    border: none;
+                    border-radius: 15px;
+                    color: #ffffff;
+                    position: absolute;
+                    right: 35;
+                    margin-top: -80;
+                    height: 30;
+                    cursor: pointer;
+                }
+
+                input[name=text-e-mail-rodapé] {
+                    font-style: italic;
+                    background-color: #e4e4e4;
+                    border: 1;
+                    border-radius: 15px;
+                    color: #000000;
+                    font-size: 16;
+                    padding: 9px 60px 0px 38px;
+                    position: absolute;
+                    right: 180;
+                    margin-top: -80;
+                    height: 30;
+                }
+
+                input:hover {
+                    background-color: #a5a5a5;
+                    color: #161616;
+                }
+
+                .copyright {
+                    color: #2800ad;
+                    background-color: #9ca6b6;
+                    text-align-last: center;
+                    font-style: italic;
+                    width: -webkit-fill-available;
+                    position: absolute;
+                    margin-top: 23px;
+                }
+
+                input[type=text] {
+                    font-style: italic;
+                }
+
+                footer {
+                    position: absolute;
+                    bottom: -90px;
+                    display: contents;
+                }
