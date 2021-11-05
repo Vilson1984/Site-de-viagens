@@ -39,13 +39,17 @@
                     font-size: 18;
                 }
 
+                .nome-empresa{
+                    position: relative;
+                    right: 110;
+                }
 
                 /*NAVEGAÇÃO*/
                 nav {
                     background-color: #c1bbd1;
                     padding: 8px;
                     height: 750px;
-                    width: 25%;
+                    width: 30%;
                     float: left;
                     list-style: none;
                 }
@@ -53,7 +57,7 @@
                 article {
                     background-color: #e4e4e4;
                     right: -190px;
-                    width: 75%;
+                    width: 70%;
                     float: left;
                     height: 750px;
                     padding: 15;
@@ -152,7 +156,7 @@
 
                 .bg-promocao-2 {
                     position: absolute;
-                    top: 165px;
+                    top: 172px;
                     left: -60px;
                     height: 425px;
                     width: 1040px;
@@ -329,16 +333,7 @@
                     padding: 15px;
                     height: 116px;
                     width: 1040px;
-                    /* background-color: #c1bbd1;
-    border-radius: 7px;*/
-                }
-
-                * {
-                    box-sizing: border-box;
-                    margin-left: auto;
-                    margin-right: auto;
-                    margin-top: auto;
-                    margin-bottom: auto;
+                    border-radius: 7px;
                 }
 
                 .passageiro-menor {
