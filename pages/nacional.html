@@ -1,51 +1,53 @@
 <html>
 
-    <head>
-        <title>Voyager Turismo</title>
-        <link rel="stylesheet" type="text/css" href="../styles/style_nacional.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="../scripts/script.js"></script>
-    </head>
+<head>
+    <title>Voyager Turismo</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style_nacional.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../scripts/script.js"></script>
+</head>
 
 
 <body>
-        <header>
-            <div>
-                <img src="../images/logo.jpg" width="70px" class="logo">
-            </div>
-            <div class="nome-empresa">Voyager Turismo</div>
-        </header>
+    <header>
+        <div>
+            <img src="../images/logo.jpg" width="70px" class="logo">
+        </div>
+        <div class="nome-empresa">Voyager Turismo</div>
+    </header>
 
-        <nav>  
-    
+    <div class="coluna-links">
+
+        <nav>
+
             <ul>
                 <li>
                     <a href="../index.html">
-                    <div class="material-icons">home</div>
-                    <div class="pagina">Página</div>
+                        <div class="material-icons">home</div>
+                        <div class="pagina">Página</div>
                     </a href>
                 </li>
-                
+
                 <div class="linha">
                     <li>
                         <a href="nacional.html">
                             <div class="material-icons">flight_takeoff</div>
-                            <div class="pagina">Destinos Nacionais</div> 
+                            <div class="pagina">Destinos Nacionais</div>
                             <div class="caixa">50</div>
                         </a href>
                     </li>
                 </div>
-        
+
                 <div class="linha">
                     <li>
                         <a href="internacional.html">
                             <div class="material-icons">public</div>
-                            <div class="pagina">Destinos Internacionais</div> 
+                            <div class="pagina">Destinos Internacionais</div>
                             <div class="caixa">12</div>
                         </a href>
                     </li>
                 </div>
-        
+
                 <div class="linha">
                     <li>
                         <a href="cambio.html">
@@ -54,7 +56,7 @@
                         </a href>
                     </li>
                 </div>
-                
+
                 <div class="linha">
                     <li>
                         <a href="dicas.html">
@@ -63,7 +65,7 @@
                         </a href>
                     </li>
                 </div>
-        
+
                 <div class="linha">
                     <li>
                         <a href="sobre.html">
@@ -72,7 +74,7 @@
                         </a href>
                     </li>
                 </div>
-                       
+
                 <div class="linha">
                     <li>
                         <a href="contato.html">
@@ -82,271 +84,277 @@
                     </li>
                 </div>
             </ul>
-           
-            
+
+
         </nav>
+    </div>
 
-        <article>
-            <div class="tres-bgs">
-                <div class="bg-promocao-1">
-
-
-                    <div class="texto-sobre-nos">
-                        Reserve sua viagem no Decolar e garanta as melhores tarifas em passagens aéreas, hotéis, pacotes
-                        de viagem, cruzeiros e aluguel de carro. Somos a maior agência de viagens online da América
-                        Latina presente em 21 países, dentre eles Argentina, Estados Unidos e Espanha. Contamos com a
-                        parceria de mais de 500 companhias aéreas e 150 mil hotéis em todo o mundo e, com isso,
-                        garantimos o melhor preço de viagem do Brasil. Ao comprar uma passagem aérea ou um pacote de
-                        viagem, os clientes do Decolar também garantem vantagens exclusivas, como descontos em
-                        restaurantes e lojas no destino escolhido, além de 10% de desconto em compras no Duty Free.
-                        Confira nossas promoções e vantagens. Aproveite!
-                    </div>
+    <article>
+        <div class="tres-bgs">
 
 
+            <div class="bg-promocao-1">
+
+
+                <div class="texto-sobre-nos">
+                    Reserve sua viagem no Decolar e garanta as melhores tarifas em passagens aéreas, hotéis, pacotes
+                    de viagem, cruzeiros e aluguel de carro. Somos a maior agência de viagens online da América
+                    Latina presente em 21 países, dentre eles Argentina, Estados Unidos e Espanha. Contamos com a
+                    parceria de mais de 500 companhias aéreas e 150 mil hotéis em todo o mundo e, com isso,
+                    garantimos o melhor preço de viagem do Brasil. Ao comprar uma passagem aérea ou um pacote de
+                    viagem, os clientes do Decolar também garantem vantagens exclusivas, como descontos em
+                    restaurantes e lojas no destino escolhido, além de 10% de desconto em compras no Duty Free.
+                    Confira nossas promoções e vantagens. Aproveite!
                 </div>
 
-                <div class="bg-promocao-2">
+
+            </div>
 
 
-                    <div id="caixacomprapassagem" class="caixa-compra-passagem">
 
-                        <div class="texto-passagens">
-                        </div>
+            <div class="bg-promocao-2">
 
+                <div class="origem-datas">
+                    <div class="grid-origem-destino">
 
-                        <form method="POST">
-
-                        <div class="conjunto-origem-destino-dataida-datavolta">
-
-                            <div class="texto-origem">
-                                Origem
-                            </div>
-
+                        <div class="texto-origem">
+                            Origem
+                            <i class="material-icons">
+                                adjust
+                            </i>
                             <input type="text" id="origem" name="origem" value="sua cidade de partida"
                                 onfocus="this.value='';" class="origem-input" onchange="caixaBaixaorigem()"
                                 onkeydown="mudaCorletra(this)" onblur="mudaCorCampo()" required>
+                        </div>
+                        <div class="texto-destino">
+                            Destino
+                            <i class="material-icons">
+                                location_on
+                            </i>
+                            <input type="text" id="destino" name="origem" value="sua cidade destino"
+                                onfocus="this.value='';" class="destino-input" onchange="caixaBaixaorigem()"
+                                onkeydown="mudaCorletra(this)" onblur="mudarCorfundodestino()" required>
+                        </div>
 
-                                
-                                <div class="icone-circulo">
-                                <i class="material-icons">
-                                    adjust
-                                </i>
-                            </div>
-                            
-                            <div class="icone-ida-e-volta">
-                                <i class="material-icons">
-                                    sync_alt
-                                </i>
-                            </div>
-
-
-                            <div class="conjunto-formulario-destino">
-                                <div class="texto-destino">
-                                    Destino
-                                </div>
-
-                                <input type="text" id="destino" name="origem" value="sua cidade destino"
-                                    onfocus="this.value='';" class="destino-input" onchange="caixaBaixaorigem()"
-                                    onkeydown="mudaCorletra(this)" onblur="mudarCorfundodestino()" required>
-    
-                                    <div class="icone-location">
-                                        <i class="material-icons">
-                                        location_on
-                                    </i>
-                                </div>
-                            </div>
-
-
-                            <div class="botoes-radio">
-                                &nbsp; &nbsp; Ida e Volta
-                                <input type="radio" name="ida-e-volta" value="ida e volta" onfocus="this.value='';">
-                                &nbsp; &nbsp; Só Ida
-                                <input type="radio" name="ida-e-volta" value="ida" onfocus="this.value='';">
-                            </div>
-
-
-                        
-                            <div class="texto-data-ida">
-                                Data de Ida
-                            </div>
-
-                            <div class="texto-data-volta">
-                                Data de Volta
-                            </div>
-                            
+                        <div class="texto-data-ida">
+                            Data de Ida
                             <input type="date" id="dataIda" name="data-ida" value="data ida e volta"
                                 onfocus="this.value='';" class="data-ida" onblur="mudarCordataIda()">
+                        </div>
 
-
-
-                        
+                        <div class="texto-data-volta">
+                            Data de Volta
                             <input type="date" id="dataVolta" name="data-volta" value="data ida e volta"
                                 onfocus="this.value='';" class="data-volta" onblur="mudarCordataVolta()">
-                            
-                                <button id="botaoEnviar" class="botao-buscar" onclick="compraConcluida()">
-                                &nbsp; Enviar
-                                </button>
+                        </div>
+                    </div>
 
-                                <div class="passageiros-classe">
 
-                                    <div class="classe-passagem">
-                                        <p>&nbsp;&nbsp;Classe:</p>
-                                        <select name="classe-passagem" id="classe-passagem" onblur="mudaCorClasse()">
-                                            <option value="economica">Econômica</option>
-                                            <option value="premium-economy">Premium Economy</option>
-                                            <option value="executiva/business">Executiva/Business</option>
-                                            <option value="primeira-classe">Primeira Classe</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            
-                               <div class="conjunto-checkbox">
-                                    <div class="texto-checkbox">
-                                    Ainda não defini as datas
-                                    </div>
+                    <div class="coluna-datas">
 
-                                    <div>
-                                        <input type="checkbox" id="checkbox" name="checkbox" value="" class="checkbox"
-                                        onclick="desativarDatas(this.checked)">
-                                    </div>
+                        <div class="botoes-radio">
+                            <input type="radio" name="ida-e-volta" value="ida e volta" onfocus="this.value='';">
+                            &nbsp; Ida e Volta
 
-                                </div>                        
+                            &nbsp;&nbsp;
+
+                            <input type="radio" name="ida-e-volta" value="ida" onfocus="this.value='';">
+                            &nbsp; Só Ida
+
+                        </div>
+
+
+                        <div class="conjunto-checkbox">
+                            <div>
+                                <input type="checkbox" id="checkbox" name="checkbox" value="" class="checkbox"
+                                    onclick="desativarDatas(this.checked)">
+                                Ainda não defini as datas
                             </div>
-                        
-                            <hr style="position:relative; top:137;">
-                        </form>
-                            <div id="div">
-                                <p style="position: relative; top: 168;left: 200;">Passageiro Adulto:</p>
-                                <div id="inputsPassageiroadulto" class="inputs-passageiro-adulto">
-                        
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="grid-classe">
+
+
+                    <div class="passageiros-classe">
+                        <div class="classe-passagem">
+                            <p>&nbsp;&nbsp;Classe:</p>
+                            <select name="classe-passagem" id="classe-passagem" onblur="mudaCorClasse()">
+                                <option value="economica">Econômica</option>
+                                <option value="premium-economy">Premium Economy</option>
+                                <option value="executiva/business">Executiva/Business</option>
+                                <option value="primeira-classe">Primeira Classe</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+                    <div class="dados-menor">
+                        <div class="passageiro-menor">
+                            <p>Passageiro menor de idade?</p>
+                            <select id="status" name="status" onblur="mudarCorMenor()">
+                                <option value=""></option>
+                                <option value="sim">Sim</option>
+                                <option value="">Não</option>
+                            </select><br><br>
+                        </div>
+
+                        <div class="formulario-oculto" id="nome" style='display:none;'>
+                            <input id="nome" type="text" value="Passageiro menor" name="nome" onfocus="this.value='';"
+                                onkeyup="alertaLogin(this)">
+                            <input id="nome" type="text" value="Nº Passaporte" name="nome" onfocus="this.value='';"
+                                onkeyup="alertaLogin(this)">
+                            <input id="nome" type="text" value="Nome do Responsavel" name="nome"
+                                onfocus="this.value='';" onkeyup="alertaLogin(this)">
+                        </div>
+                    </div>
+                    <!--HABILITAR FORMULÁRIO OCULTO MENOR DE IDADE-->
+                    <script type="text/javascript">
+                        $('#status').change(function () {
+                            var valor = $('#status').val();
+                            if (valor == "sim") {
+                                $('#nome').show();
+                            }
+                            else {
+                                $('#nome').hide();
+                            }
+                        });
+                    </script>
+
+                    <div id="div" class="box-classe-adulto">
+
+                        <p>Passageiro Adulto:</p>
+
+                        <div>
+
+                            <div id="inputsPassageiroadulto" class="inputs-passageiro-adulto">
+
                                 <input class="input-nome-adulto" type="text" id="nome-adulto" name="nome-adulto"
-                                onfocus="this.value='';" value="Digite seu nome" onblur="mudarCorNomeAdulto()"
-                                required>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    onfocus="this.value='';" value="Digite seu nome" onblur="mudarCorNomeAdulto()"
+                                    required>&nbsp;&nbsp;&nbsp;&nbsp;
 
                                 <input class="input-numero-passaporte-adulto" type="text" id="numero-passaporte-adulto"
-                                onfocus="this.value='';" name="numero-passaporte-adulto" value="Nº do passaporte"
-                                onblur="mudarCorPassaporte()" required>
-                            
-                                <button id="botao-duplicar" onclick="adicionaPassageiro()">+</button>
+                                    onfocus="this.value='';" name="numero-passaporte-adulto" value="Nº do passaporte"
+                                    onblur="mudarCorPassaporte()" required>
+                                &nbsp;
+                                <button id="botao-duplicar" onclick="adicionaPassageiro()">+</button>&nbsp;
                                 <button id="botao-subtrair" onclick="removerPassageiro()">-</button>
-                            </div>
-                        
-                        </div>
-                    
-                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-                        <div class="dados-menor">
-                            <div class="passageiro-menor">
-                                <p>Passageiro menor de idade?</p>
-                                <select id="status" name="status" onblur="mudarCorMenor()">
-                                    <option value=""></option>
-                                    <option value="sim">Sim</option>
-                                    <option value="">Não</option>
-                                </select><br><br>
                             </div>
 
-                            <div class="formulario-oculto" id="nome" style='display:none;'>
-                                <input id="nome" type="text" value="Passageiro menor" name="nome"
-                                    onfocus="this.value='';" onkeyup="alertaLogin(this)">
-                                <input id="nome" type="text" value="Nº Passaporte" name="nome" onfocus="this.value='';"
-                                    onkeyup="alertaLogin(this)">
-                                <input id="nome" type="text" value="Nome do Responsavel" name="nome"
-                                    onfocus="this.value='';" onkeyup="alertaLogin(this)">
-                            </div>
+
+                            <button id="botaoEnviar" class="botao-buscar" onclick="compraConcluida()">
+                                &nbsp; Concluir Compra
+                            </button>
                         </div>
 
-
-                        <!--HABILITAR FORMULÁRIO OCULTO MENOR DE IDADE-->
-                        <script type="text/javascript">
-                            $('#status').change(function () {
-                                var valor = $('#status').val();
-                                if (valor == "sim") {
-                                    $('#nome').show();
-                                }
-                                else {
-                                    $('#nome').hide();
-                                }
-                            });
-                        </script>
-                        
                     </div>
                 </div>
 
-                <div class="bg-promocao-3">
-                    <div class="hospedagens-baratas">
-                        <div class="titulo-bg2">Hospedagens Baratas</div>
-                        <a href="">
-                            <p>Hotéis em Curitiba</p>
-                        </a>
-                        <a href="">
-                            <p>Pousadas em Campos do Jordão</p>
-                        </a>
-                        <a href="">
-                            <p>Pousadas em Bombinhas</p>
-                        </a>
-                        <a href="">
-                            <p>Pousadas em Monte Verde</p>
-                        </a>
-                    </div>
-
-
-                    <div class="passagens-nordeste">
-                        <div class="titulo-bg2">Passagens</div>
-                        <a href="">
-                            <p>Passagens para Maceió</p>
-                        </a>
-                        <a href="">
-                            <p>Passagens para Porto de Galinhas</p>
-                        </a>
-                        <a href="">
-                            <p>Passagens para João Pessoa</p>
-                        </a>
-                        <a href="">
-                            <p>Passagens para Jericoacoara</p>
-                        </a>
-                    </div>
-
-
-                    <div class="pacotes-de-viagens">
-                        <div class="titulo-bg2">Pacotes de Viagens</div>
-                        <a href="">
-                            <p>Viagem para Salvador</p>
-                        </a>
-                        <a href="">
-                            <p>Viagem para Jalapão</p>
-                        </a>
-                        <a href="">
-                            <p>Viagem para Nordeste</p>
-                        </a>
-                        <a href="">
-                            <p>Viagem para Foz do Iguaçu</p>
-                        </a>
-                    </div>
-
-                    <div class="promova-seu-negocio">
-                        <div class="titulo-bg2">Promova seu negócio</div>
-                        <a href="">
-                            <p>Cadastre sua locadora</p>
-                        </a>
-                        <a href="">
-                            <p>Participe do Programa de Agências</p>
-                        </a>
-                        <a href="">
-                            <p>Faça parte da Rede de Afiliados</p>
-                        </a>
-                    </div>
-                </div>
             </div>
-        </article>
 
-        <footer>
+            <div class="bg-promocao-3">
 
-            <i class="material-icons" style="font-size: 100; color: #4202f3;">mail</i>
+                <div class="passagens-nordeste">
+                    <div class="titulo-bg2">Passagens</div>
+                    <a href="">
+                        <p>Passagens para Maceió</p>
+                    </a>
+                    <a href="">
+                        <p>Passagens para Porto de Galinhas</p>
+                    </a>
+                    <a href="">
+                        <p>Passagens para João Pessoa</p>
+                    </a>
+                    <a href="">
+                        <p>Passagens para Jericoacoara</p>
+                    </a>
+                </div>
+                <div class="pacotes-de-viagens">
+                    <div class="titulo-bg2">Pacotes de Viagens</div>
+                    <a href="">
+                        <p>Viagem para Salvador</p>
+                    </a>
+                    <a href="">
+                        <p>Viagem para Jalapão</p>
+                    </a>
+                    <a href="">
+                        <p>Viagem para Nordeste</p>
+                    </a>
+                    <a href="">
+                        <p>Viagem para Foz do Iguaçu</p>
+                    </a>
+                </div>
+                <div class="hospedagens-baratas">
+                    <div class="titulo-bg2">Hospedagens Baratas</div>
+                    <a href="">
+                        <p>Hotéis em Curitiba</p>
+                    </a>
+                    <a href="">
+                        <p>Pousadas em Campos do Jordão</p>
+                    </a>
+                    <a href="">
+                        <p>Pousadas em Bombinhas</p>
+                    </a>
+                    <a href="">
+                        <p>Pousadas em Monte Verde</p>
+                    </a>
+                </div>
+                <div class="promova-seu-negocio">
+                    <div class="titulo-bg2">Promova seu negócio</div>
+                    <a href="">
+                        <p>Cadastre sua locadora</p>
+                    </a>
+                    <a href="">
+                        <p>Participe do Programa de Agências</p>
+                    </a>
+                    <a href="">
+                        <p>Faça parte da Rede de Afiliados</p>
+                    </a>
+                </div>
 
-            <div class="informativo-newsletter">
+            </div>
 
-                <div class="inscreva-se">Inscreva-se para receber ofertas exclusivas </div>
-                <div class="texto-inscreva-se">Receba de primeira mão nossas ofertas e benefícios exclusivos</div>
+
+    </article>
+
+    <footer>
+        <div class="divs-footer">
+
+            <div class="div1">
+
+
+                <div class="div-form">
+                    <form method="POST">
+                        <input type="text" id="email" name="text-e-mail-rodapé" value="insira seu e-mail"
+                            onfocus="this.value='';" onblur="caixaBaixaemail()">
+                    </form>
+                </div>
+
+                <div class="icone-botao">
+                    <i class="material-icons" style="font-size: 100; color: #4202f3;">mail</i>
+                    <input type="submit" name="botao-enviar-rodape" value="Receba novidades">
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="div2">
+
+
+                <div class="inscreva-se">Inscreva-se para receber ofertas exclusivas <br>
+                    Receba de primeira mão nossas ofertas e benefícios exclusivos
+                </div>
 
                 <div class="roda-pé-caixa-de-inscricao">
                     <i class="material-icons" style="font-size: 18px;">done &nbsp;</i>
@@ -359,15 +367,12 @@
                     &nbsp; <a href=""> Ver políticas de privacidade
                     </a>
                 </div>
+
             </div>
+        </div>
 
-            <form method="POST">
-                <input type="text" id="email" name="text-e-mail-rodapé" value="insira seu e-mail"
-                    onfocus="this.value='';" onchange="caixaBaixaemail()">
-                <input type="submit" name="botao-enviar-rodape" value="Quero recebê-las">
-            </form>
+        </div>
+    </footer>
+</body>
 
-            <div class="copyright">Copyright</div>
-        </footer>
-    </body>
 </html>
