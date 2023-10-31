@@ -6,4 +6,6 @@ O site foi desenvolvido em HTML, CSS e JS.
 Para navegar no site, você pode utilizar o link a seguir:
 https://vilson1984.github.io/Site-de-viagens/
 
+⚠️ 🚧 Workin in Progress: Falta tornar o site responsivo.
+
 Agradeço imensamente ao Gledson, meu professor, por sua paciência infinita e por sempre se mostrar solícito.
